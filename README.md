@@ -18,7 +18,7 @@ To run the JDBMusicArchive application locally, please follow these steps:
 
 ```shell
 git clone https://github.com/your-username/JDBMusicArchive.git
-
+```
 1.    Import the project into your preferred Java IDE (e.g., Eclipse, IntelliJ IDEA).
 
 2.    Ensure that you have the necessary dependencies configured for your project. You can manage dependencies using a build tool like Maven or Gradle.
