@@ -2,6 +2,8 @@
 
 JDBMusicArchive is a Java application that allows you to manage and track music records using an SQLite database. It provides a user-friendly interface for adding, editing, and searching music records, making it an essential tool for music enthusiasts and collectors.
 
+[![My Skills](https://skillicons.dev/icons?i=java,sqlite,figma&theme=light)](https://skillicons.dev)
+
 ## Features
 
 - **Music Record Management**: Easily add, edit, and delete music records in the database.
