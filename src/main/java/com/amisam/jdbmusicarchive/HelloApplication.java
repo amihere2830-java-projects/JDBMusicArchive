@@ -49,7 +49,6 @@ public class HelloApplication extends Application {
          */
         // launch();
 
-
         /**-----------------------------
          * Connect to the database
          * -----------------------------
