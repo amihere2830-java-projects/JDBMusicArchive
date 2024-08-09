@@ -20,8 +20,8 @@ public class HelloApplication extends Application {
     public static boolean artists_flag = false;
     public static boolean albums_flag = false;
     public static boolean songs_flag = false;
-    public static boolean artist_list_info = false;
-    public static boolean insert_records_flag = true;
+    public static boolean artist_list_info = true;
+    public static boolean insert_records_flag = false;
 
     /* ---------------------------------METHODS---------------------------*/
 
@@ -42,10 +42,20 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+
+        /**-----------------------------
+         * Launch the JavaFX application
+         * -----------------------------
+         */
+        // launch();
 
 
-        
+        /**-----------------------------
+         * Connect to the database
+         * -----------------------------
+         */
+
+
         //Initialize variables
         DataSource data_src;
         String select_count;
