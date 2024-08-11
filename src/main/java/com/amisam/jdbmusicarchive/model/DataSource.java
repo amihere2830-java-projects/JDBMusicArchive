@@ -1,6 +1,7 @@
 /*=================================Import Packages==========================*/
 package com.amisam.jdbmusicarchive.model;
 
+import com.amisam.jdbmusicarchive.datamodel.SongItem;
 /*==================================Import Resources========================*/
 import com.amisam.jdbmusicarchive.utilities.ThreadColor;
 
@@ -8,7 +9,9 @@ import java.net.URI;
 import java.sql.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /*=============================== DataSource =================================
  * DataSource Class Definition
@@ -379,10 +382,6 @@ public class DataSource {
 
                 songs.add(song);
             }
-
-            System.out.println("----------------------------------------");
-            System.out.println(i + " songs retrieved from Songs database.");
-            System.out.println("=========================================");
             return (songs);
 
         } catch (SQLException e){
@@ -406,10 +405,19 @@ public class DataSource {
 
             ResultSetMetaData meta = results.getMetaData();
             int numColumns = meta.getColumnCount();
-            for (i = 1; i <= numColumns; i++){
-                System.out.format("Column "+ThreadColor.YELLOW+"%d"+ThreadColor.RESET+" in the songs table is names"+ThreadColor.YELLOW+" %s\n"+ThreadColor.RESET,
-                        i, meta.getColumnName(i));
+            if (numColumns == 0){
+                System.out.println(ThreadColor.RED+"No columns found in the "+
+                        "songs table"+ThreadColor.RESET);
+                return;
             }
+            // Map<String, Object> songs = new HashMap<>();
+
+            // for (i = 1; i <= numColumns; i++){
+                
+            //     // songs.put(meta.getColumnName(i), meta.getColumnType(i));
+            //     System.out.format("Column "+ThreadColor.YELLOW+"%d"+ThreadColor.RESET+" in the songs table is names"+ThreadColor.YELLOW+" %s\n"+ThreadColor.RESET,
+            //             i, meta.getColumnName(i));
+            // }
         } catch (SQLException e){
             System.out.println(ThreadColor.RED+"Couldn't create statement"+
                     ThreadColor.RESET);

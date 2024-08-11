@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<DialogPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="com.amisam.jdbmusicarchive.DialogController">
+
+    <!--The text to display in the header area (comes above the contentText)-->
+    <headerText>
+        We could put instructions here
+    </headerText>
+
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <Label text="Track Id:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="trackField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextArea fx:id="titleField" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Album:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextArea fx:id="albumField" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+    </content>
+
+
+                                    
+
+
+</DialogPane>

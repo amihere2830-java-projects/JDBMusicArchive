@@ -1,5 +1,7 @@
 package com.amisam.jdbmusicarchive.model;
 
+import java.time.temporal.TemporalAccessor;
+
 public class Song {
     private int id;
     private int tract_id;
@@ -45,5 +47,13 @@ public class Song {
 
     public int getAlbum_id() {
         return album_id;
+    }
+
+    public String getDetails() {
+        return "ID: " + getId() + " Tract ID: " + getTract_id() + " Title: " + getTitle() + " Album ID: " + getAlbum_id();
+    }
+
+    public TemporalAccessor getDeadline() {
+        return null;
     }
 }
